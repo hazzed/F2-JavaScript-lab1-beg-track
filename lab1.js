@@ -58,9 +58,11 @@ assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.'
  zoo-themed.  Make one pass and one fail. In the failure message, describe why
  it failed.
 */
+var lions = 14
+var rhinos = 16
 
-assert("Lion" === "Lion");
-assert("Lion" === "Other", 'lion does not equal other therefor it fails.');
+assert(lions > rhinos, 'Assert passes');
+assert(rhinos < lions, 'Assert fails');
 
 /* ========================================================================
 ----------------- Meerkats (20 points total)-------------------------------
