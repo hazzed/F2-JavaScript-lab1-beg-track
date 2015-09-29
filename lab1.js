@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 /* LAB 1: A Trip to Woodland Park Zoo
 
@@ -59,7 +59,8 @@ assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.'
  it failed.
 */
 
-//your code goes here
+assert("Lion" === "Lion");
+assert("Lion" === "Other", 'lion does not equal other therefor it fails.');
 
 /* ========================================================================
 ----------------- Meerkats (20 points total)-------------------------------
@@ -80,12 +81,29 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 // TODO: part #1: use a for loop to replace the words in sentence 1 with
 // 'chirp' (10 points)
 
-// your code goes here
+var wordSplit = sentence1.split(' ');
+
+
+for (var i = 0; i < wordSplit.length; i++){
+  wordSplit[i] = 'chirp';
+ if (i === 2)
+  wordSplit[i] = 'chirp.';
+}
+sentence1 = wordSplit.join(' ');
+console.log(sentence1);
+
 
 // TODO: part #2: use a while or do-while loop to replace the words in sentence 2
 // with 'chirp' (10 points)
-
-// your code goes here
+wordSplit = sentence2.split(' ');
+var i = 0;
+while (i < 8) {
+  wordSplit[i] = 'chirp'; i++;
+  if (i === 8)
+    wordSplit[i] = 'chirp.';
+}
+sentence2 = wordSplit.join(' ');
+console.log(sentence2);
 
 // Leave these assertions as-is! If they pass, your code works.
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
@@ -103,12 +121,12 @@ assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
 
 var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
 var nextAnimal;
-
 // TODO: 10 points
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
-// your code goes here
-
+var randomAnimal = favoriteAnimals[Math.floor(Math.random()*favoriteAnimals.length)];
+nextAnimal = randomAnimal;
+console.log(nextAnimal);
 assert(nextAnimal, 'assign something to nextAnimal');
 
 /* =====================================================================
