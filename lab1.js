@@ -1,4 +1,4 @@
-  'use strict';
+
 
 /* LAB 1: A Trip to Woodland Park Zoo
 
@@ -58,8 +58,8 @@ assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.'
  zoo-themed.  Make one pass and one fail. In the failure message, describe why
  it failed.
 */
-var lions = 14
-var rhinos = 16
+var lions = 14;
+var rhinos = 16;
 
 assert(lions > rhinos, 'Assert passes');
 assert(rhinos < lions, 'Assert fails');
@@ -158,7 +158,7 @@ var animalExhibitStats = {
  notation with dot notation wherever possible.
 */
 
-assert(animalExhibitStats[numberOpen] === 13, 'there should be 13 open exhibits');
+assert(animalExhibitStats.numberOpen === 13, 'there should be 13 open exhibits');
 assert(animalExhibitStats['number closed'] === 2, 'there should be 2 closed exhibits');
 assert(animalExhibitStats['petting-zoo-open'], 'hey! =( i was promised meerkats!');
 assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
@@ -168,7 +168,7 @@ assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
 // Write an assert about the 'mostPopular' property of animalExibitStats.
 // Use the above examples to guide you.
 
-Assert(animalExhibitsStats.numberOpen > animalExhibitsStats['number closed'], 'There are 13 open and 2 closed')
+assert(animalExhibitStats.numberOpen > ['number closed'], 'There are 13 open and 2 closed');
 
 /* ==================================================================
 ----------------- Code Style (10 points) ----------------------------
